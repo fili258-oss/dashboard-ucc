@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
       },
+      colors: {
+        'app-test': '#4ac2c4',
+      },
     },
   },
   plugins: [],

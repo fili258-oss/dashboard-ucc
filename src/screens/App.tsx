@@ -4,7 +4,7 @@
 function App() {
   return (
     <div className='grid grid-rows-[60px_1fr_50px] w-screen h-screen bg-gray-700 font-roboto'>
-      <header className='order-3 bg-yellow-300 sm:order-1'>
+      <header className='order-3 bg-app-test sm:order-1'>
         <p>header</p>
       </header>
 
