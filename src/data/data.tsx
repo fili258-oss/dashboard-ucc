@@ -5,6 +5,7 @@ import {
   FaGaugeHigh,
   FaUser,
   FaLock,
+  FaFacebook,
 } from 'react-icons/fa6';
 
 export const DataNavbar = {
@@ -16,6 +17,7 @@ export const DataNavbar = {
       id: 1,
       title: 'Dashboard',
       icon: <FaHouse className='text-app-primary w-5 h-5' />,
+      description: 'xxxx',
     },
     {
       id: 2,
@@ -42,5 +44,15 @@ export const DataNavbar = {
       title: 'Sign In',
       icon: <FaLock className='w-5 h-5' />,
     },
+    {
+      id: 7,
+      title: 'Facebook',
+      icon: <FaFacebook className='w-5 h-5' />,
+    },
   ],
+};
+
+export const DataHeader = {
+  title: 'NFT Marketplace',
+  subTitle: 'Pages / NFT Marketplace',
 };

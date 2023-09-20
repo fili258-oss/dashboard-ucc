@@ -10,9 +10,9 @@ const Navbar = () => {
         <span className='ml-2 font-light'>{titleLogo[1]}</span>
       </h1>
       <ul className='flex flex-col gap-y-6 pt-10 pl-8'>
-        {DataNavbar.nav.map((item) => (
+        {DataNavbar.nav.map((item, index) => (
           <li
-            key={item.id}
+            key={index}
             className='flex flex-row items-center text-app-gray-700'
           >
             {item.icon}
