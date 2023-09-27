@@ -5,7 +5,6 @@ import {
   FaGaugeHigh,
   FaUser,
   FaLock,
-  FaFacebook,
 } from 'react-icons/fa6';
 
 export const DataNavbar = {
