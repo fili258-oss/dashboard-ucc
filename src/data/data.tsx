@@ -7,7 +7,21 @@ import {
   FaLock,
 } from 'react-icons/fa6';
 
-export const DataNavbar = {
+type NavItemType = {
+  id: number;
+  title: string;
+  icon: JSX.Element;
+  to: string;
+};
+
+type NavbarType = {
+  logo: {
+    title: string;
+  };
+  nav: NavItemType[];
+};
+
+export const dataNavbar = (): NavbarType => ({
   logo: {
     title: 'HORIZON FREE',
   },
@@ -49,9 +63,4 @@ export const DataNavbar = {
       to: '/signIn',
     },
   ],
-};
-
-export const DataHeader = {
-  title: 'NFT Marketplace',
-  subTitle: 'Pages / NFT Marketplace',
-};
+});

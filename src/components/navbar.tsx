@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
-import { DataNavbar } from '../data/data';
+import { dataNavbar } from '../data/data';
 
 const Navbar = () => {
-  const titleLogo = DataNavbar.logo.title.split(' ');
+  const titleLogo = dataNavbar().logo.title.split(' ');
 
   return (
     <nav className='flex flex-col min-w-[290px] bg-app-white'>
@@ -13,7 +13,7 @@ const Navbar = () => {
         </h1>
       </NavLink>
       <ul className='flex flex-col gap-y-6 pt-10 pl-8'>
-        {DataNavbar.nav.map((item) => (
+        {dataNavbar().nav.map((item) => (
           <NavLink
             key={item.id}
             to={item.to}
