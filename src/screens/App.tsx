@@ -11,6 +11,7 @@ import Kanban from './Kanban';
 import Profile from './Profile';
 import SignIn from './SignIn';
 import NotFound from './NotFound';
+import Footer from '../components/footer';
 
 function App() {
   return (
@@ -31,9 +32,7 @@ function App() {
             <Route path='*' element={<NotFound />} />
           </Routes>
         </section>
-        <footer className='bg-green-300'>
-          <p>footer</p>
-        </footer>
+        <Footer />
       </section>
     </main>
   );

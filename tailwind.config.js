@@ -15,6 +15,7 @@ export default {
         'app-blue-dark': '#2B3674',
         'app-blue-light': '#4285F4',
         'app-purple-light': '#6A53FF',
+        'app-background-main': '#F4F7FE',
         'app-gray': {
           50: '#f3f7fa',
           100: '#eaeff5',
