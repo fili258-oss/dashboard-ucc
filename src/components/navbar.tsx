@@ -1,8 +1,11 @@
 import { NavLink } from 'react-router-dom';
+
 import { dataNavbar } from '../data/data';
+import { useNavbarStore } from '../store/navbarStore';
 
 const Navbar = () => {
-  const titleLogo = dataNavbar().logo.title.split(' ');
+  const { navbarItemActive, selectedItemNavbar } = useNavbarStore();
+  const titleLogo = dataNavbar(navbarItemActive).logo.title.split(' ');
 
   return (
     <nav className='flex flex-col min-w-[290px] bg-app-white'>
@@ -13,14 +16,23 @@ const Navbar = () => {
         </h1>
       </NavLink>
       <ul className='flex flex-col gap-y-6 pt-10 pl-8'>
-        {dataNavbar().nav.map((item) => (
+        {dataNavbar(navbarItemActive).nav.map((item) => (
           <NavLink
             key={item.id}
             to={item.to}
             className='flex flex-row items-center text-app-gray-700'
+            onClick={() => {
+              selectedItemNavbar(item.id);
+            }}
           >
             {item.icon}
-            <span className='ml-3 text-base font-medium text-app-gray-700'>
+            <span
+              className={`ml-3 text-base font-medium ${
+                item.id === navbarItemActive
+                  ? 'text-app-primary'
+                  : 'text-app-gray-700'
+              }`}
+            >
               {item.title}
             </span>
           </NavLink>
