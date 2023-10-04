@@ -12,15 +12,14 @@ import Profile from './Profile';
 import SignIn from './SignIn';
 import NotFound from './NotFound';
 import Footer from '../components/footer';
+import Header from '../components/header';
 
 function App() {
   return (
     <main className='flex flex-row w-screen h-screen bg-app-white font-roboto'>
       <Navbar />
       <section className='flex-1 grid grid-rows-[60px_1fr_50px]'>
-        <header className='bg-yellow-300'>
-          <p>header</p>
-        </header>
+        <Header />
         <section className='bg-red-300'>
           <Routes>
             <Route path='/' element={<Dashboard />} />
@@ -31,6 +30,7 @@ function App() {
             <Route path='/signIn' element={<SignIn />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+          H
         </section>
         <Footer />
       </section>

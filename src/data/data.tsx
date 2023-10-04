@@ -21,6 +21,11 @@ type NavbarType = {
   nav: NavItemType[];
 };
 
+type LanguageType = {
+  label: string;
+  code: string;
+};
+
 export const dataNavbar = (navItem: number): NavbarType => ({
   logo: {
     title: 'HORIZON FREE',
@@ -88,3 +93,8 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
   ],
 });
+
+export const languageData = (): LanguageType[] => [
+  { label: 'English', code: 'en' },
+  { label: 'Spanish', code: 'es' },
+];
