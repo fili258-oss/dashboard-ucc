@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useNavbarStore } from '../store/navbarStore';
 
 const Footer = () => {
-  const { selectedItemNavbar } = useNavbarStore();
+  const { navbarItemActive, selectedItemNavbar } = useNavbarStore();
 
   return (
     <footer className='flex flex-row items-center justify-between px-8 text-sm text-app-gray-700 bg-app-background-main'>
@@ -16,6 +16,7 @@ const Footer = () => {
           onClick={() => {
             selectedItemNavbar(2);
           }}
+          className={navbarItemActive === 2 ? 'underline' : 'no-underline'}
         >
           Marketplace
         </NavLink>
