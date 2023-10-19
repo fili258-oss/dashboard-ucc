@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { useNavbarStore } from '../store/navbarStore';
 
 const Footer = () => {
   const { navbarItemActive, selectedItemNavbar } = useNavbarStore();
+  const { t } = useTranslation();
 
   return (
     <footer className='flex flex-row items-center justify-between px-8 text-sm text-app-gray-700 bg-app-background-main'>
@@ -20,8 +22,8 @@ const Footer = () => {
         >
           Marketplace
         </NavLink>
-        <li>License</li>
-        <li>Terms of Use</li>
+        <li>{t('licence')}</li>
+        <li>{t('termUse')}</li>
         <li>Blog</li>
       </ul>
     </footer>

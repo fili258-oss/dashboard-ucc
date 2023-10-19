@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { dataNavbar } from '../data/data';
 import { useNavbarStore } from '../store/navbarStore';
@@ -6,6 +7,7 @@ import { useNavbarStore } from '../store/navbarStore';
 const Navbar = () => {
   const { navbarItemActive, selectedItemNavbar } = useNavbarStore();
   const titleLogo = dataNavbar(navbarItemActive).logo.title.split(' ');
+  const { t } = useTranslation();
 
   return (
     <nav className='flex flex-col min-w-[290px] bg-app-white'>

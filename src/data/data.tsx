@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import {
   FaHouse,
   FaCartShopping,
@@ -5,6 +7,7 @@ import {
   FaGaugeHigh,
   FaUser,
   FaLock,
+  
 } from 'react-icons/fa6';
 
 type NavItemType = {
@@ -26,14 +29,18 @@ type LanguageType = {
   code: string;
 };
 
-export const dataNavbar = (navItem: number): NavbarType => ({
+export const dataNavbar = (navItem: number): NavbarType => {
+  const { t } = useTranslation();
+  return {
+
+
   logo: {
     title: 'HORIZON FREE',
   },
   nav: [
     {
       id: 1,
-      title: 'Dashboard',
+      title: t('navbarDashboard'),
       icon: (
         <FaHouse
           className={navItem === 1 ? 'text-app-primary w-5 h-5' : 'w-5 h-5'}
@@ -43,7 +50,7 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
     {
       id: 2,
-      title: 'NFT Marketplace',
+      title: t('navbarMarketplace'),
       icon: (
         <FaCartShopping
           className={navItem === 2 ? 'text-app-primary w-5 h-5' : 'w-5 h-5'}
@@ -53,7 +60,7 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
     {
       id: 3,
-      title: 'Tables',
+      title: t('navbarTables'),
       icon: (
         <FaChartSimple
           className={navItem === 3 ? 'text-app-primary w-5 h-5' : 'w-5 h-5'}
@@ -63,7 +70,7 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
     {
       id: 4,
-      title: 'Kanban',
+      title: t('navbarKanban'),
       icon: (
         <FaGaugeHigh
           className={navItem === 4 ? 'text-app-primary w-5 h-5' : 'w-5 h-5'}
@@ -73,7 +80,7 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
     {
       id: 5,
-      title: 'Profile',
+      title: t('navbarProfile'),
       icon: (
         <FaUser
           className={navItem === 5 ? 'text-app-primary w-5 h-5' : 'w-5 h-5'}
@@ -83,7 +90,7 @@ export const dataNavbar = (navItem: number): NavbarType => ({
     },
     {
       id: 6,
-      title: 'Sign In',
+      title: t('navbarSigin'),
       icon: (
         <FaLock
           className={navItem === 6 ? 'text-app-primary w-5 h-5' : 'w-5 h-5'}
@@ -92,7 +99,8 @@ export const dataNavbar = (navItem: number): NavbarType => ({
       to: '/signIn',
     },
   ],
-});
+}
+};
 
 export const languageData = (): LanguageType[] => [
   { label: 'English', code: 'en' },

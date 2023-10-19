@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <section className='flex-1 grid grid-rows-[60px_1fr_50px]'>
         <Header />
-        <section className='bg-red-300'>
+        <section className='bg-app-background-main'>
           <Routes>
             <Route path='/' element={<Dashboard />} />
             <Route path='/marketplace' element={<Marketplace />} />
@@ -30,7 +30,6 @@ function App() {
             <Route path='/signIn' element={<SignIn />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
-          H
         </section>
         <Footer />
       </section>
