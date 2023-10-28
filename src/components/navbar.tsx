@@ -10,7 +10,7 @@ const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className='flex flex-col min-w-[290px] bg-app-white'>
+    <nav className='flex flex-col min-w-[250px] bg-app-white'>
       <NavLink to='/'>
         <h1 className='py-14 border-b text-center text-app-blue-dark text-[1.625rem] border-app-gray-100'>
           <span className='font-bold'>{titleLogo[0]}</span>
